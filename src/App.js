@@ -9,6 +9,7 @@ import BuyersPT from "./Components/BuyersPT";
 import SellersPT from "./Components/SellersPT";
 import PropertiesToLetPT from "./Components/PropertiesToLetPT";
 import PropertiesForSalePT from "./Components/PropertiesForSalePT";
+import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
