@@ -60,8 +60,8 @@ function GetSale() {
 
   return (
     <div>
-      <h2> Filter </h2>
-      {saleArray}
+      <h3> Filter </h3>
+      
       <form>
 
         <label htmlFor="ty" >Type</label>
@@ -81,6 +81,7 @@ function GetSale() {
         <br />
         <button type="search" className="btn btn-danger btn-sm"> Clear </button>
       </form>
+      {saleArray}
     </div>
   );
 }

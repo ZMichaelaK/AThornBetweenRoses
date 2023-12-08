@@ -20,7 +20,7 @@ function PropertiesToLet() {
       <form onSubmit={e => {
         e.preventDefault();
         axios.post("http://localhost:3000/PropertiesToLet",
-        { Type, Rent:parseInt (Rent), Bedrooms:parseInt (Bedrooms), Bathrooms:parseInt(Bathrooms), Garden:(Garden=="Yes"), Address, Postcode })
+        { Type, Rent:parseInt (Rent), Bedrooms:parseInt (Bedrooms), Bathrooms:parseInt(Bathrooms), Garden, Address, Postcode })
 
           .then(response => {
             setType("");

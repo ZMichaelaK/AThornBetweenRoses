@@ -1,8 +1,8 @@
 {
   "Sellers": [
-  {
-      "FirstName": "agus",
-      "LastName": "tina",
+    {
+      "FirstName": "Agus",
+      "LastName": "Tina",
       "Address": "123 fake street",
       "Postcode": "eh1 1aq",
       "PhoneNumber": "0777777777",
@@ -26,7 +26,6 @@
     }
   ],
   "Buyers": [
-
     {
       "FirstName": "Poca",
       "LastName": "Hontas",
@@ -87,7 +86,6 @@
       "Postcode": "eh1 1aq",
       "id": 5
     }
-
   ],
   "PropertiesToLet": [
     {
@@ -109,6 +107,36 @@
       "Address": "123 sakdnans",
       "Postcode": "ab1 2aq",
       "id": 2
+    },
+    {
+      "Type": "Semi-Detached",
+      "Rent": 550,
+      "Bedrooms": 4,
+      "Bathrooms": 4,
+      "Garden": "Yes",
+      "Address": "99 long street",
+      "Postcode": "ZZ1 1ZZ",
+      "id": 3
+    },
+    {
+      "Type": "Semi-Detached",
+      "Rent": 20,
+      "Bedrooms": 1,
+      "Bathrooms": 2,
+      "Garden": "No",
+      "Address": "12222 road",
+      "Postcode": "ab1 1ba",
+      "id": 4
+    },
+    {
+      "Type": "Semi-Detached",
+      "Rent": 100,
+      "Bedrooms": 5,
+      "Bathrooms": 5,
+      "Garden": "Yes",
+      "Address": "1 small street",
+      "Postcode": "pp0 0pp",
+      "id": 5
     }
   ]
 }
