@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types'
+import { pathToFileURL } from 'url';
 
 function BuyersPT(props) {
     return (
         <div>
-            <h4>{props.FirstName} {props.LastName}</h4>
-            <p>{props.Address}</p>
-            <p>{props.Postcode}</p>
-            <p>{props.PhoneNumber}</p>
+                            <h4>{props.FirstName} {props.LastName}</h4>
+                            <p>{props.Address}</p>
+                            <p>{props.Postcode}</p>
+                            <p>{props.PhoneNumber}</p>
 
-        </div>
+                        </div>
+                   
+        
     );
 }
 BuyersPT.propTypes = {

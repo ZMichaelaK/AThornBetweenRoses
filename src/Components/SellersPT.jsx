@@ -3,6 +3,7 @@ import Sellers from './Sellers';
 
 function SellersPT(props) {
     return (
+        
         <div>
             <h4>{props.FirstName} {props.LastName}</h4>
             <p>{props.Address}</p>

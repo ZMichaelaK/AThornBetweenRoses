@@ -9,12 +9,13 @@ import BuyersPT from "./Components/BuyersPT";
 import SellersPT from "./Components/SellersPT";
 import PropertiesToLetPT from "./Components/PropertiesToLetPT";
 import PropertiesForSalePT from "./Components/PropertiesForSalePT";
-
-function App() {
-  return (
+import bootstrap  from 'bootstrap/dist/css/bootstrap.min.css';
+ function App(){
+return(
     <div>
-      <Router>
+            <Router>
         <nav>
+             
           <Link to="/">Home</Link>
           <Link to="/Buyers">Buyers</Link>
           <Link to="/Sellers">Sellers</Link>
