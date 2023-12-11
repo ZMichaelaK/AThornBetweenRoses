@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import GetBuyers from "./GetBuyers";
-
+ 
 function Buyers() {
   const [FirstName, setFirstName] = useState("");
   const [LastName, setLastName] = useState("");
   const [Address, setAddress] = useState("");
   const [Postcode, setPostcode] = useState("");
   const [PhoneNumber, setPhoneNumber] = useState("");
-
+ 
   return (
     <div>
       <h1>Buyers</h1>
@@ -69,15 +69,15 @@ function Buyers() {
           type="tel"
         ></input>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit"className="btn btn-success btn-sm">Submit</button>
       </form>
       <br />
       <div>
         <GetBuyers />
       </div>
-      
+     
     </div>
   );
 }
-
+ 
 export default Buyers;

@@ -29,7 +29,7 @@ function GetLet() {
     if (filterrt && plet.Rent > parseInt(filterrt)) continue;
     if (filterbds && plet.Bedrooms < parseInt(filterbds)) continue;
     if (filterbts && plet.Bathrooms < parseInt(filterbts)) continue;
-    if (filtergds && plet.Garden !== filtergds) continue;
+    if (filtergds && plet.Garden < parseInt(filtergds)) continue;
     if (filterads && plet.Address === filterads) continue;
     if (filterpcd && plet.Postcode === filterpcd) continue;
 
@@ -49,9 +49,9 @@ function GetLet() {
   }
 
   return (
+
     <div>
-      <h2> A list of properties to let </h2>
-      {letArray}
+
       <form>
 
 <label htmlFor="ty" >Type</label>
@@ -71,6 +71,11 @@ function GetLet() {
 <br />
 <button type="search" className="btn btn-danger btn-sm"> Clear </button>
 </form>
+
+      <h2> A list of properties to let </h2>
+    
+      {letArray}
+      
     </div>
   );
 }
