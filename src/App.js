@@ -1,27 +1,25 @@
 import "./App.css";
-import Sellers from "./Components/Sellers";
-import PropertiesToLet from "./Components/PropertiesToLet";
-import Buyers from "./Components/Buyers";
-import PropertiesForSale from "./Components/PropertiesForSale";
+import Sellers from "./Components/Sellers/Sellers";
+import PropertiesToLet from "./Components/Let/PropertiesToLet";
+import Buyers from "./Components/Buyers/Buyers";
+import PropertiesForSale from "./Components/Sale/PropertiesForSale";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import BuyersPT from "./Components/BuyersPT";
 import SellersPT from "./Components/SellersPT";
 import PropertiesToLetPT from "./Components/PropertiesToLetPT";
 import PropertiesForSalePT from "./Components/PropertiesForSalePT";
-import bootstrap  from 'bootstrap/dist/css/bootstrap.min.css';
- function App(){
-return(
+
+function App() {
+  return (
     <div>
-            <Router>
+      <Router>
         <nav>
-             
           <Link to="/">Home</Link>
           <Link to="/Buyers">Buyers</Link>
           <Link to="/Sellers">Sellers</Link>
-          <Link to="/PropertiesForSale">For sale</Link>
-          <Link to="/PropertiesToLet">To let</Link>
-        </nav>
+          <Link to="/PropertiesForSale">Sale</Link>
+          <Link to="/PropertiesToLet">Let</Link> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Sellers" element={<Sellers />} />
@@ -30,7 +28,7 @@ return(
           <Route path="/PropertiesToLet" element={<PropertiesToLet />} />
         </Routes>
       </Router>
-    </div>
+    </header>
   );
 }
 export default App;
