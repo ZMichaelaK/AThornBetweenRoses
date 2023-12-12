@@ -12,7 +12,7 @@ function Buyers() {
   return (
     <div>
       <h1>Buyers</h1>
-      <form
+      <form className="drop-menu"
         onSubmit={(e) => {
           e.preventDefault();
           axios
