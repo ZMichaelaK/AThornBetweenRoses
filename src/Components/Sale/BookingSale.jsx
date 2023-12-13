@@ -170,7 +170,7 @@ function BookingSale() {
                   </tr>
                   ))}
                 </tbody>
-              </table>);
+              </table>
              </Card>
             )
           } else {
