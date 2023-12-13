@@ -26,9 +26,9 @@ function BookingSale() {
         // console.log("sale:", sale);
       })
       .catch((err) => console.error(err));
-      axios
+    axios
       .get("http://localhost:3000/bookingForSale")
-      .then((response)=>{
+      .then((response) => {
         console.log("Response:", response);
         setBookings(response.data);
         console.log("booking:", booking)
@@ -122,34 +122,64 @@ function BookingSale() {
         <button type="submit" className="btn btn-success btn-md">
           Submit
         </button>
-        
+
       </form>
       <div>
-  <h3>Current Bookings</h3>
-  {(() => {
-    if (booking.length > 0) {
-      return (
-        <Card>
-          <ul>
-            {booking.map((book, index) => (
-              <li key={index}>
-                <strong>Name:</strong> {book.Name}, &nbsp;
-                <strong>Email:</strong> {book.Email}, &nbsp;
-                <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
-                <strong>Date:</strong> {book.Date}, &nbsp;
-                <strong>Time Slot:</strong> {book.TimeSlot}
-              </li>
-            ))}
-          </ul>
-        </Card>
-      );
-    } else {
-      return <p>No bookings available.</p>;
-    }
-  })()}
-</div>
-</div>
+        <h3>Current Bookings</h3>
+        {(() => {
+          if (booking.length > 0) {
+            return (
+             <Card >
+               <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <br />
+                    <th>
+                      Email
+                    </th>
+                    <br />
+                    <th>
+                      Phone Number
+                    </th>
+                    <br />
+                    <th>
+                      Date                
+                      </th>
+                      <br />
+                    <th>
+                      Time Slot
+                    </th>
+                    <br />
+                  </tr>
+                </thead>
+                <tbody>
+                  {booking.map(book => (<tr key={book.id}>
+                    <td> {book.Name}</td>
+                    <br />
+                    <td> {book.Email}</td>
+                    <br />
+                    <td> {book.PhoneNumber}</td>
+                    <br />
+                    <td> {book.Date}</td>
+                    <br />
+                    <td> {book.TimeSlot}</td>
+                    <br />
+                  </tr>
+                  ))}
+                </tbody>
+              </table>);
+             </Card>
+            )
+          } else {
+            return <p>No bookings available.</p>;
+          }
+        })()}
+      </div>
+    </div>
 
-);
+  );
 }
 export default BookingSale;
