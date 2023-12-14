@@ -4,7 +4,6 @@ import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
 
-
 function BookingSale() {
   const navigate = useNavigate();
   const params = useParams();
@@ -16,7 +15,6 @@ function BookingSale() {
   const [booking, setBookings] = useState([]);
   const [property, setProperty] = useState();
 
-
   useEffect(function () {
     axios
       .get("http://localhost:3000/PropertiesForSale/" + params.id)
@@ -26,15 +24,13 @@ function BookingSale() {
         // console.log("sale:", sale);
       })
       .catch((err) => console.error(err));
-      axios
-      .get("http://localhost:3000/bookingForSale")
-      .then((response)=>{
-        console.log("Response:", response);
-        setBookings(response.data);
-        console.log("booking:", booking)
-      })
+    axios.get("http://localhost:3000/bookingForSale").then((response) => {
+      console.log("Response:", response);
+      setBookings(response.data);
+      console.log("booking:", booking);
+    });
   }, []);
-  console.log(property)
+  console.log(property);
   // const saleArray = [];
 
   // const bookingArray = [];
@@ -47,14 +43,13 @@ function BookingSale() {
   //       Postcode={seller.Postcode}
   //       PhoneNumber={seller.PhoneNumber}
 
-
   return (
     <div>
       <h1>Bookings</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log("submission successful")
+          console.log("submission successful");
           axios
             .post("http://localhost:3000/bookingForSale", {
               Name,
@@ -62,7 +57,7 @@ function BookingSale() {
               PhoneNumber,
               Date,
               TimeSlot,
-              property: params.id
+              property: params.id,
             })
 
             .then((response) => {
@@ -71,8 +66,6 @@ function BookingSale() {
               setPhoneNumber("");
               setDate("");
               setTimeSlot("");
-
-
             })
             .catch((err) => console.error(err));
         }}
@@ -122,36 +115,33 @@ function BookingSale() {
         <button type="submit" className="btn btn-success btn-md">
           Submit
         </button>
-        
       </form>
       <div>
-  <h3>Current Bookings</h3>
-  {(() => {
-    if (booking.length > 0  ) {
-     
-      return (
-        <Card>
-          <ul>
-            {booking.map((book) => (
-              <li >
-                <strong>Name:</strong> {book.Name}, &nbsp;
-                <strong>Email:</strong> {book.Email}, &nbsp;
-                <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
-                <strong>Date:</strong> {book.Date}, &nbsp;
-                <strong>Time Slot:</strong> {book.TimeSlot}&nbsp;
-                <strong>Property:</strong> {book.property}
-              </li>
-            ))}
-          </ul>
-        </Card>
-      );
-    } else {
-      return <p>No bookings available.</p>;
-    }
-  })()}
-</div>
-</div>
-
-);
+        <h3>Current Bookings</h3>
+        {(() => {
+          if (booking.length > 0) {
+            return (
+              <Card>
+                <ul>
+                  {booking.map((book) => (
+                    <li>
+                      <strong>Name:</strong> {book.Name}, &nbsp;
+                      <strong>Email:</strong> {book.Email}, &nbsp;
+                      <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
+                      <strong>Date:</strong> {book.Date}, &nbsp;
+                      <strong>Time Slot:</strong> {book.TimeSlot}&nbsp;
+                      <strong>Property:</strong> {book.property}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            );
+          } else {
+            return <p>No bookings available.</p>;
+          }
+        })()}
+      </div>
+    </div>
+  );
 }
 export default BookingSale;

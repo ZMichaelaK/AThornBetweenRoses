@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types'
-import Sellers from './Sellers';
+import PropTypes from "prop-types";
+import Sellers from "./Sellers";
 import Card from "react-bootstrap/Card";
-
 
 function SellersPT(props) {
   return (
@@ -13,7 +12,7 @@ function SellersPT(props) {
             <img
               src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg"
               alt="avatar"
-              className="card-image"
+              className="card-person"
             />
             {props.FirstName} {props.LastName}
           </h4>
@@ -24,16 +23,13 @@ function SellersPT(props) {
       </div>
     </Card>
   );
-       
 }
 SellersPT.propTypes = {
-    FirstName: PropTypes.string.isRequired,
-    LastName: PropTypes.string.isRequired,
-    Address: PropTypes.string.isRequired,
-    Postcode: PropTypes.string.isRequired,
-    PhoneNumber: PropTypes.number.isRequired,
-
-}
-
+  FirstName: PropTypes.string.isRequired,
+  LastName: PropTypes.string.isRequired,
+  Address: PropTypes.string.isRequired,
+  Postcode: PropTypes.string.isRequired,
+  PhoneNumber: PropTypes.number.isRequired,
+};
 
 export default SellersPT;
