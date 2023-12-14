@@ -149,7 +149,7 @@ function BookingLet() {
                     <br />
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="table-group-divider">
                   {letBooking.map(book => (<tr key={book.id}>
                     <td> {book.Name}</td>
                     <br />

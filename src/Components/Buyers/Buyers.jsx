@@ -11,7 +11,6 @@ function Buyers() {
 
   return (
     <div>
-      <h1>Buyers</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -32,16 +31,17 @@ function Buyers() {
             })
             .catch((err) => console.error(err));
         }}
-      >
+       >{" "}
+      <h1>Buyers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
         <input
-          value={FirstName} br
+          value={FirstName} 
           onChange={(e) => setFirstName(e.target.value)}
           id="fn"
           type="text"
           class="form-control"
         ></input>
-        <br />
+        
         <label htmlFor="ln">Last Name &nbsp;</label>
         <input
           value={LastName}
@@ -50,7 +50,7 @@ function Buyers() {
           type="text"
           class="form-control"
         ></input>
-        <br />
+        
         <label htmlFor="ad">Address &nbsp; &nbsp; &nbsp;</label>
         <input
           value={Address}
@@ -59,7 +59,7 @@ function Buyers() {
           type="text"
           class="form-control"
         ></input>
-        <br />
+        
         <label htmlFor="pc">Postcode &nbsp;&nbsp;&nbsp;</label>
         <input
           value={Postcode}
@@ -68,7 +68,7 @@ function Buyers() {
           type="text"
           class="form-control"
         ></input>
-        <br />
+     
         <label htmlFor="pn">PhoneNum</label>
         <input
           value={PhoneNumber}
@@ -77,7 +77,7 @@ function Buyers() {
           type="tel"
           class="form-control"
         ></input>
-        <br />
+        
         <button type="submit" className="btn btn-success btn-sm">Submit</button>
       </form>
       <br />

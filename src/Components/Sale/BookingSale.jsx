@@ -4,7 +4,6 @@ import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
 
-
 function BookingSale() {
   const navigate = useNavigate();
   const params = useParams();
@@ -34,19 +33,7 @@ function BookingSale() {
         console.log("booking:", booking)
       })
   }, []);
-  console.log(property)
-  // const saleArray = [];
-
-  // const bookingArray = [];
-  // for (const book of booking) {
-  //   bookingArray.push(
-  //       key={book.id},
-  //       Name={book.Name}
-  //       LastName={seller.LastName}
-  //       Address={seller.Address}
-  //       Postcode={seller.Postcode}
-  //       PhoneNumber={seller.PhoneNumber}
-
+  console.log(property);
 
   return (
     <div>
@@ -54,7 +41,7 @@ function BookingSale() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log("submission successful")
+          console.log("submission successful");
           axios
             .post("http://localhost:3000/bookingForSale", {
               Name,
@@ -126,13 +113,13 @@ function BookingSale() {
       </form>
       <br />
       <br />
-      
-        <h3>Current Bookings</h3>
-        {(() => {
-          if (booking.length > 0) {
-            return (
-             <Card >
-               <table>
+
+      <h3>Current Bookings</h3>
+      {(() => {
+        if (booking.length > 0) {
+          return (
+            <Card >
+              <table>
                 <thead>
                   <tr>
                     <th>
@@ -148,9 +135,9 @@ function BookingSale() {
                     </th>
                     <br />
                     <th>
-                      Date                
-                      </th>
-                      <br />
+                      Date
+                    </th>
+                    <br />
                     <th>
                       Time Slot
                     </th>
@@ -161,7 +148,7 @@ function BookingSale() {
                     <br />
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="table-group-divider">
                   {booking.map(book => (<tr key={book.id}>
                     <td> {book.Name}</td>
                     <br />
@@ -179,13 +166,13 @@ function BookingSale() {
                   ))}
                 </tbody>
               </table>
-             </Card>
-            )
-          } else {
-            return <p>No bookings available.</p>;
-          }
-        })()}
-      </div>
+            </Card>
+          )
+        } else {
+          return <p>No bookings available.</p>;
+        }
+      })()}
+    </div>
 
   );
 }

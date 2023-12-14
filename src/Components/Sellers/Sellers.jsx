@@ -11,7 +11,7 @@ function Sellers() {
 
   return (
     <div>
-      <h1>Sellers</h1>
+      
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -33,6 +33,8 @@ function Sellers() {
             .catch((err) => console.error(err));
         }}
       >
+        {" "}
+        <h1>Sellers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
         <input
           value={FirstName}
