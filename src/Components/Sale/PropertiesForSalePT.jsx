@@ -14,7 +14,7 @@ function PropertiesForSalePT(props) {
         <div className="card-body card-text">
         <h4 className="card-title"></h4>
         {" "}
-        <label htmlFor="pr"><h5>Premium Listing &nbsp;</h5></label>
+        <label htmlFor="pr"><h5 className="p1">Premium Listing &nbsp;</h5></label>
                     <input
  
  

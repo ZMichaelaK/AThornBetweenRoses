@@ -12,7 +12,7 @@ function PropertiesToLetPT(props) {
       <div className="flex">
         <div className="card-body card-text">
           <h4 className="card-title"></h4>
-          <label htmlFor="pr"><h5>Premium Listing &nbsp;</h5></label>
+          <label htmlFor="pr"><h5 className="p1">Premium Listing &nbsp;</h5></label>
                     <input
  
  
@@ -38,7 +38,7 @@ function PropertiesToLetPT(props) {
           <p> {"Address: " + props.Address}</p>
           <p> {"Postcode: " + props.Postcode}</p>
           <select>
-            <option >For Let</option>
+            <option>For Let</option>
             <option>Already Let</option>
             <option>Withdrawn</option>
           </select>

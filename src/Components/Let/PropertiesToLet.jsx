@@ -11,6 +11,7 @@ function PropertiesToLet() {
   const [Address, setAddress] = useState("");
   const [Postcode, setPostcode] = useState("");
 
+
   return (
     <div className="row">
       <div className="col">
@@ -125,6 +126,8 @@ function PropertiesToLet() {
           </button>
         </div>
       </form>
+      <br />
+      <br />
       </div>
       
       
