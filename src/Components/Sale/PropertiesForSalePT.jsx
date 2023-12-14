@@ -14,7 +14,7 @@ function PropertiesForSalePT(props) {
         <div className="card-body card-text">
         <h4 className="card-title"></h4>
         {" "}
-        <label htmlFor="pr"><h5 className="p1">Premium Listing &nbsp;</h5></label>
+        <label htmlFor="pr"><h4 className="p1"><strong>Premium Listing &nbsp;</strong></h4></label>
                     <input
  
  
@@ -32,7 +32,7 @@ function PropertiesForSalePT(props) {
               className="d-inline-block align-text-middle"/> 
               <br />
               <br />
-                        <p>{"Price: £" +props.Price} </p>
+                        <p>{"Price: £" +props.Price}</p>
                         <p> {"Type: " +props.Type}</p>
                         <p> {"Bedrooms: "+props.Bedrooms}</p>
                         <p> {"Bathrooms: " +props.Bathrooms}</p>
