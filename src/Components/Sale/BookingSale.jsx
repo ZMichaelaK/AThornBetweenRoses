@@ -124,7 +124,9 @@ function BookingSale() {
         </button>
 
       </form>
-      <div>
+      <br />
+      <br />
+      
         <h3>Current Bookings</h3>
         {(() => {
           if (booking.length > 0) {
@@ -178,7 +180,6 @@ function BookingSale() {
           }
         })()}
       </div>
-    </div>
 
   );
 }
