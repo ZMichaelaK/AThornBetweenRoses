@@ -26,9 +26,9 @@ function BookingSale() {
         // console.log("sale:", sale);
       })
       .catch((err) => console.error(err));
-      axios
+    axios
       .get("http://localhost:3000/bookingForSale")
-      .then((response)=>{
+      .then((response) => {
         console.log("Response:", response);
         setBookings(response.data);
         console.log("booking:", booking)
@@ -122,36 +122,87 @@ function BookingSale() {
         <button type="submit" className="btn btn-success btn-md">
           Submit
         </button>
-        
+
       </form>
       <div>
-  <h3>Current Bookings</h3>
-  {(() => {
-    if (booking.length > 0  ) {
-     
-      return (
-        <Card>
-          <ul>
-            {booking.map((book) => (
-              <li >
-                <strong>Name:</strong> {book.Name}, &nbsp;
-                <strong>Email:</strong> {book.Email}, &nbsp;
-                <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
-                <strong>Date:</strong> {book.Date}, &nbsp;
-                <strong>Time Slot:</strong> {book.TimeSlot}&nbsp;
-                <strong>Property:</strong> {book.property}
-              </li>
-            ))}
-          </ul>
-        </Card>
-      );
-    } else {
-      return <p>No bookings available.</p>;
-    }
-  })()}
-</div>
-</div>
+        <h3>Current Bookings</h3>
+        {(() => {
+          if (booking.length > 0) {
 
-);
+            return (
+              <Card>
+
+                <ul>
+                  {booking.map((book) => (
+                    <li >
+                      <table class="table">
+
+                        <thead>
+
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">PhoneNumber</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Timeslot</th>
+                            <th scope="col">Property</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>PhoneNumber</td>
+                            <td>Date</td>
+                            <td>Timeslot</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+
+                            <td>Name</td>
+
+                            <td>Email</td>
+
+                            <td>PhoneNumber</td>
+
+                            <td>Date</td>
+
+                            <td>Timeslot</td>
+
+                          </tr>
+
+                          <tr>
+
+                            <th scope="row">3</th>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>PhoneNumber</td>
+                            <td>Date</td>
+                            <td>Timeslot</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <th scope="row">1</th>
+                      < strong>Name:</strong> {book.Name}, &nbsp;
+                      <strong>Email:</strong> {book.Email}, &nbsp;
+                      <strong>Phone Number:</strong> {book.PhoneNumber}, &nbsp;
+                      <strong>Date:</strong> {book.Date}, &nbsp;
+                      <strong>Time Slot:</strong> {book.TimeSlot}&nbsp;
+                      <strong>Property:</strong> {book.property}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            );
+          } else {
+            return <p>No bookings available.</p>;
+          }
+        })()}
+      </div>
+    </div>
+
+  );
 }
 export default BookingSale;
