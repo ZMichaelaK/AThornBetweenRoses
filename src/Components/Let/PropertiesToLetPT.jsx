@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 function PropertiesToLetPT(props) {
   const navigate = useNavigate();
   return (
-    <Card className="col-sm-6 col-md-4 col-lg-3 m-auto">
+    <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
       <div className="flex">
         <div className="card-body card-text">
           <h4 className="card-title"></h4>

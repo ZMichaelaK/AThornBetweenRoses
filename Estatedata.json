@@ -128,6 +128,26 @@
       "Address": "123 sakdnans",
       "Postcode": "eh1 1aq",
       "id": 3
+    },
+    {
+      "Type": "",
+      "Price": null,
+      "Bedrooms": null,
+      "Bathrooms": null,
+      "Garden": false,
+      "Address": "1282",
+      "Postcode": "ZZ0 0ZZ",
+      "id": 4
+    },
+    {
+      "Type": "",
+      "Price": 11,
+      "Bedrooms": null,
+      "Bathrooms": null,
+      "Garden": false,
+      "Address": "",
+      "Postcode": "",
+      "id": 5
     }
   ],
   "PropertiesToLet": [
@@ -160,6 +180,26 @@
       "Address": "1",
       "Postcode": "1",
       "id": 3
+    },
+    {
+      "Type": "Semi-Detached",
+      "Rent": 11,
+      "Bedrooms": null,
+      "Bathrooms": null,
+      "Garden": null,
+      "Address": "",
+      "Postcode": "",
+      "id": 4
+    },
+    {
+      "Type": "",
+      "Rent": 2222,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": null,
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "id": 5
     }
   ]
 }
