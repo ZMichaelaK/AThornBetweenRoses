@@ -126,13 +126,13 @@ function BookingSale() {
       </form>
       <br />
       <br />
-      
-        <h3>Current Bookings</h3>
-        {(() => {
-          if (booking.length > 0) {
-            return (
-             <Card >
-               <table>
+
+      <h3>Current Bookings</h3>
+      {
+        booking.length > 0 ?
+          (
+            <Card >
+              <table>
                 <thead>
                   <tr>
                     <th>
@@ -148,9 +148,9 @@ function BookingSale() {
                     </th>
                     <br />
                     <th>
-                      Date                
-                      </th>
-                      <br />
+                      Date
+                    </th>
+                    <br />
                     <th>
                       Time Slot
                     </th>
@@ -179,13 +179,13 @@ function BookingSale() {
                   ))}
                 </tbody>
               </table>
-             </Card>
-            )
-          } else {
-            return <p>No bookings available.</p>;
-          }
-        })()}
-      </div>
+            </Card>
+          )
+
+          : <p>No bookings available.</p>
+      }
+
+    </div>
 
   );
 }

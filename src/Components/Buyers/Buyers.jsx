@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import GetBuyers from "./GetBuyers";
 
+
+// set state updates the value of firstname lastname etc
 function Buyers() {
   const [FirstName, setFirstName] = useState("");
   const [LastName, setLastName] = useState("");
@@ -32,6 +34,7 @@ function Buyers() {
             .catch((err) => console.error(err));
         }}
       >
+        {/* form to add buyers */}
         {" "}
         <h1>Buyers &nbsp;</h1>
         <label htmlFor="fn">First Name &nbsp;</label>
@@ -83,6 +86,9 @@ function Buyers() {
       </form>
       <br />
       <br />
+
+      {/* this then renders the getbuyers 
+      component so they show on the page */}
       <GetBuyers />
     </div>
   );

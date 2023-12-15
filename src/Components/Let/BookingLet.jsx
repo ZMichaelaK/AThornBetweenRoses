@@ -15,7 +15,7 @@ function BookingLet() {
   const [letBooking, setLetBookings] = useState([]);
   const [letProperty, setLetProperty] = useState();
 
-  
+
   useEffect(function () {
     axios
       .get("http://localhost:3000/PropertiesToLet/" + params.id)
@@ -25,9 +25,9 @@ function BookingLet() {
         // console.log("sale:", sale);
       })
       .catch((err) => console.error(err));
-      axios
+    axios
       .get("http://localhost:3000/bookingForLet")
-      .then((response)=>{
+      .then((response) => {
         console.log("Response:", response);
         setLetBookings(response.data);
         console.log("booking:", letBooking)
@@ -50,7 +50,7 @@ function BookingLet() {
               Date,
               TimeSlot,
               letProperty: params.id
-              
+
             })
             .then((response) => {
               setName("");
@@ -58,7 +58,7 @@ function BookingLet() {
               setPhoneNumber("");
               setDate("");
               setTimeSlot("");
-             
+
 
             })
             .catch((err) => console.error(err));
@@ -76,7 +76,7 @@ function BookingLet() {
         <label htmlFor="ln">Email &nbsp;</label>
         <input
           value={Email}
-          onChange={(e) =>  setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           id="ln"
           type="email"
           className="form-control"
@@ -84,7 +84,7 @@ function BookingLet() {
         <label htmlFor="ad">Phone Number &nbsp; &nbsp; &nbsp;</label>
         <input
           value={PhoneNumber}
-          onChange={(e) =>  setPhoneNumber(e.target.value)}
+          onChange={(e) => setPhoneNumber(e.target.value)}
           id="ad"
           type="tel"
           className="form-control"
@@ -113,14 +113,13 @@ function BookingLet() {
       <br />
       <br />
 
-      
-  <h3>Current Bookings</h3>
-  {(() => {
-    if (letBooking.length > 0  ) {
-     
-      return (
-        <Card >
-               <table>
+
+      <h3>Current Bookings</h3>
+      {
+        letBooking.length > 0 ?
+          (
+            <Card >
+              <table>
                 <thead>
                   <tr>
                     <th>
@@ -136,9 +135,9 @@ function BookingLet() {
                     </th>
                     <br />
                     <th>
-                      Date                
-                      </th>
-                      <br />
+                      Date
+                    </th>
+                    <br />
                     <th>
                       Time Slot
                     </th>
@@ -167,13 +166,12 @@ function BookingLet() {
                   ))}
                 </tbody>
               </table>
-             </Card>
-            )
-          } else {
-            return <p>No bookings available.</p>;
-          }
-        })()}
-      </div>
+            </Card>
+          )
+          : <p>No bookings available.</p>
+      }
+
+    </div>
 
   );
 }

@@ -3,6 +3,8 @@ import Card from "react-bootstrap/Card";
 
 function BuyersPT(props) {
   return (
+// how are buyers show on the page once returned
+
     <Card className="col-sm-6 col-md-4 col-lg-3 m-4">
       <div className="flex">
         <div className="card-body card-text">
